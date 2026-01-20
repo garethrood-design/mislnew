@@ -7,28 +7,20 @@
 var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
 ;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
 
-  // SEU ID JÁ ESTÁ AQUI
+  // Carrega seu Pixel
   ttq.load('D5NTGKRC77U3FFO96PR0');
   ttq.page();
 
-  // --- PARTE NOVA QUE VOCÊ PRECISA ADICIONAR ---
-  
-  // 1. Dispara o evento ViewContent
+  // Dispara o evento ViewContent
   ttq.track('ViewContent', {
       "contents": [
           {
-              "content_id": "redirect_offer", 
-              "content_name": "Oferta Principal"
+              "content_id": "redirect_page", 
+              "content_name": "Redirecionador"
           }
       ]
   });
-
-  // 2. Faz o redirecionamento com 1.5 segundos de espera
-  // (Isso dá tempo para o evento acima chegar no TikTok)
-  setTimeout(function() {
-      window.location.href = "https://SEU-LINK-DE-DESTINO-AQUI.com"; 
-  }, 1500);
-
+  
 }(window, document, 'ttq');
 </script>
     <meta charset="UTF-8" />
